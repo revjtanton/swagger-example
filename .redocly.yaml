@@ -1,0 +1,9 @@
+# See https://redoc.ly/docs/cli/configuration/ for more information.
+apiDefinitions:
+  main: docs/openapi/openapi.yaml
+lint:
+  extends:
+    - recommended
+  rules:
+    no-unused-components: warning
+    info-license: off

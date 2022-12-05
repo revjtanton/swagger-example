@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  email:
+    type: string
+    example: test@alcortechsolutions.com
+  type:
+    type: string
+    example: test
+  createdAt:
+    type: string
+    format: date-time
+  modifiedAt:
+    type: string
+    format: date-time
