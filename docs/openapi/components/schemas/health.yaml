@@ -1,0 +1,14 @@
+type: object
+properties:
+  uptime:
+    type: string
+    example: 00:00:00
+  environment:
+    type: string
+    example: development
+  version:
+    type: string
+    example: 1.0.0
+  requestId:
+    type: string
+    format: uuid

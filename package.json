@@ -1,0 +1,23 @@
+{
+  "name": "swagger-example",
+  "version": "1.0.0",
+  "description": "An example of multi-repo swagger docs hosted via mkdocs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "openapi lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revjtanton/swagger-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revjtanton/swagger-example/issues"
+  },
+  "homepage": "https://github.com/revjtanton/swagger-example#readme",
+  "devDependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.95"
+  }
+}

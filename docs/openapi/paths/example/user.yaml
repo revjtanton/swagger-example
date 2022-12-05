@@ -1,0 +1,84 @@
+get:
+  security:
+    - bearerAuth: []
+  tags:
+    - example
+  summary: Reads a single Example User
+  description: This is an example.
+  operationId: getExampleUser
+  parameters:
+    - name: id
+      in: path
+      description: The ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    200:
+      description: The Example User object
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/example/output.yaml
+    401:
+      description: Authorization information is missing or invalid.
+    404:
+      description: Example User not found.
+patch:
+  security:
+    - bearerAuth: []
+  tags:
+    - example
+  summary: Updates an Example User
+  description: This is an example.
+  operationId: updateExampleUser
+  parameters:
+    - name: id
+      in: path
+      description: The ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/example/input.yaml
+  responses:
+    200:
+      description: Example User updated
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/example/output.yaml
+    400:
+      description: Invalid or missing information sent.
+    401:
+      description: Authorization information is missing or invalid.
+    404:
+      description: Example not found.
+delete:
+  security:
+    - bearerAuth: []
+  tags:
+    - example
+  summary: Deletes a single Example User
+  description: This is an example.
+  operationId: deleteExampleUser
+  parameters:
+    - name: id
+      in: path
+      description: The ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    200:
+      description: The Example User is deleted
+    401:
+      description: Authorization information is missing or invalid.
+    404:
+      description: Example User not found.

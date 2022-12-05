@@ -1,0 +1,40 @@
+openapi: 3.0.2
+info:
+  version: 1.x.x
+  title: Example API
+  contact:
+    email: jason@alcortechsolutions.com
+  description: >
+    This is an API example.
+externalDocs:
+  description: Full API documentation
+  url: "https://developer.alcortechsolutions.com"
+tags:
+  - name: example
+    description: CRUD operations relating to example functionality
+servers:
+  - url: http://localhost:{port}/example/{basePath}
+    description: A local environment
+    variables:
+      port:
+        default: "3000"
+      basePath:
+        default: local
+  - url: https://dev.alcortechsolutions.com/example/{basePath}
+    description: The DEV environment
+    variables:
+      basePath:
+        default: v1
+paths:
+  "/health":
+    $ref: "paths/health.yaml"
+  "/user":
+    $ref: "paths/example/users.yaml"
+  "/user/{id}":
+    $ref: "paths/example/user.yaml"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

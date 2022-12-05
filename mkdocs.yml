@@ -1,0 +1,16 @@
+site_name: swagger-example
+theme: readthedocs
+
+nav:
+  - README: "README.md"
+  - DOCS:
+      - Technical Specification: tech-spec.md
+      - API Specification: api-spec.md
+
+plugins:
+  - render_swagger
+  - search
+  - awesome-pages
+  - macros
+extra_css:
+  - assets/css/swagger-ui-bundle.css

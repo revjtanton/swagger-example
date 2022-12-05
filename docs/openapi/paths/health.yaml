@@ -1,0 +1,13 @@
+get:
+  summary: The application Healthcheck
+  description: A Healthcheck is the status check for other applications.
+  operationId: n/a
+  responses:
+    200:
+      description: The Healthcheck object
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/health.yaml
+    404:
+      description: Example not found.

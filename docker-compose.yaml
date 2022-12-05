@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mkdocs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: mkdocs
+    restart: always
+    ports:
+      - "10000:80"
